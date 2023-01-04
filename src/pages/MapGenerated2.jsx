@@ -11,7 +11,8 @@ import {
 import MarkerClusterGroup from "react-leaflet-cluster";
 import "leaflet/dist/leaflet.css";
 
-import localIcon from "../images/legends/Dirian_Pokok_1_40.png";
+import DirianImage from "../images/legends/Dirian_Pokok_1_40.png";
+import JaringanJalanImage from "../images/legends/Jaringan_Jalan_1_39.png";
 import clusterImage from "../images/marker-icon.png";
 
 // IMPORTING ALL DATA
@@ -38,6 +39,37 @@ import Dirian_Pokok_47 from "../dataQGIS/Dirian_Pokok_47.json";
 import Dirian_Pokok_5_13 from "../dataQGIS/Dirian_Pokok_5_13.json";
 import Dirian_Pokok_6_6 from "../dataQGIS/Dirian_Pokok_6_6.json";
 
+import Gunatanah_1_35 from "../dataQGIS/Gunatanah_1_35.json";
+import Gunatanah_2_28 from "../dataQGIS/Gunatanah_2_28.json";
+import Gunatanah_3_21 from "../dataQGIS/Gunatanah_3_21.json";
+import Gunatanah_42 from "../dataQGIS/Gunatanah_42.json";
+import Gunatanah_4_15 from "../dataQGIS/Gunatanah_4_15.json";
+import Gunatanah_5_7 from "../dataQGIS/Gunatanah_5_7.json";
+import Gunatanah_6_0 from "../dataQGIS/Gunatanah_6_0.json";
+
+import Jaringan_Jalan_1_39 from "../dataQGIS/Jaringan_Jalan_1_39.json";
+import Jaringan_Jalan_2_32 from "../dataQGIS/Jaringan_Jalan_2_32.json";
+import Jaringan_Jalan_3_25 from "../dataQGIS/Jaringan_Jalan_3_25.json";
+import Jaringan_Jalan_46 from "../dataQGIS/Jaringan_Jalan_46.json";
+import Jaringan_Jalan_4_19 from "../dataQGIS/Jaringan_Jalan_4_19.json";
+import Jaringan_Jalan_5_12 from "../dataQGIS/Jaringan_Jalan_5_12.json";
+import Jaringan_Jalan_6_5 from "../dataQGIS/Jaringan_Jalan_6_5.json";
+
+import Perimeter_Ladang_1_37 from "../dataQGIS/Perimeter_Ladang_1_37.json";
+import Perimeter_Ladang_2_30 from "../dataQGIS/Perimeter_Ladang_2_30.json";
+import Perimeter_Ladang_3_22 from "../dataQGIS/Perimeter_Ladang_3_22.json";
+import Perimeter_Ladang_44 from "../dataQGIS/Perimeter_Ladang_44.json";
+import Perimeter_Ladang_4_17 from "../dataQGIS/Perimeter_Ladang_4_17.json";
+import Perimeter_Ladang_5_10 from "../dataQGIS/Perimeter_Ladang_5_10.json";
+import Perimeter_Ladang_6_2 from "../dataQGIS/Perimeter_Ladang_6_2.json";
+
+import Terlebih_Tanam_1_34 from "../dataQGIS/Terlebih_Tanam_1_34.json";
+import Terlebih_Tanam_2_27 from "../dataQGIS/Terlebih_Tanam_2_27.json";
+import Terlebih_Tanam_3_20 from "../dataQGIS/Terlebih_Tanam_3_20.json";
+import Terlebih_Tanam_41 from "../dataQGIS/Terlebih_Tanam_41.json";
+import Terlebih_Tanam_4_14 from "../dataQGIS/Terlebih_Tanam_4_14.json";
+import Terlebih_Tanam_5_9 from "../dataQGIS/Terlebih_Tanam_5_9.json";
+import Terlebih_Tanam_6_3 from "../dataQGIS/Terlebih_Tanam_6_3.json";
 // END IMPORTING ALL DATA
 
 const MapGenerated = () => {
@@ -55,6 +87,11 @@ const MapGenerated = () => {
   }, [zoomer]);
 
   const mapStyle = { height: "90vh" };
+
+  const gambareJalan = L.icon({
+    iconUrl: JaringanJalanImage,
+    iconSize: [32, 32],
+  });
 
   const clusterGroup = new L.MarkerClusterGroup({
     iconCreateFunction: (cluster) => {
@@ -123,10 +160,10 @@ const MapGenerated = () => {
                   pointToLayer={(feature, latlng) => {
                     return L.marker(latlng, {
                       icon: L.icon({
-                        iconUrl: localIcon,
-                        iconSize: [5, 5],
-                        iconAnchor: [5, 5],
-                        popupAnchor: [5, 5],
+                        iconUrl: DirianImage,
+                        iconSize: [25, 25],
+                        iconAnchor: [25, 25],
+                        popupAnchor: [25, 25],
                       }),
                     });
                   }}
@@ -137,10 +174,10 @@ const MapGenerated = () => {
                   pointToLayer={(feature, latlng) => {
                     return L.marker(latlng, {
                       icon: L.icon({
-                        iconUrl: localIcon,
-                        iconSize: [5, 5],
-                        iconAnchor: [5, 5],
-                        popupAnchor: [5, 5],
+                        iconUrl: DirianImage,
+                        iconSize: [25, 25],
+                        iconAnchor: [25, 25],
+                        popupAnchor: [25, 25],
                       }),
                     });
                   }}
@@ -151,10 +188,10 @@ const MapGenerated = () => {
                   pointToLayer={(feature, latlng) => {
                     return L.marker(latlng, {
                       icon: L.icon({
-                        iconUrl: localIcon,
-                        iconSize: [5, 5],
-                        iconAnchor: [5, 5],
-                        popupAnchor: [5, 5],
+                        iconUrl: DirianImage,
+                        iconSize: [25, 25],
+                        iconAnchor: [25, 25],
+                        popupAnchor: [25, 25],
                       }),
                     });
                   }}
@@ -165,10 +202,10 @@ const MapGenerated = () => {
                   pointToLayer={(feature, latlng) => {
                     return L.marker(latlng, {
                       icon: L.icon({
-                        iconUrl: localIcon,
-                        iconSize: [5, 5],
-                        iconAnchor: [5, 5],
-                        popupAnchor: [5, 5],
+                        iconUrl: DirianImage,
+                        iconSize: [25, 25],
+                        iconAnchor: [25, 25],
+                        popupAnchor: [25, 25],
                       }),
                     });
                   }}
@@ -179,10 +216,10 @@ const MapGenerated = () => {
                   pointToLayer={(feature, latlng) => {
                     return L.marker(latlng, {
                       icon: L.icon({
-                        iconUrl: localIcon,
-                        iconSize: [5, 5],
-                        iconAnchor: [5, 5],
-                        popupAnchor: [5, 5],
+                        iconUrl: DirianImage,
+                        iconSize: [25, 25],
+                        iconAnchor: [25, 25],
+                        popupAnchor: [25, 25],
                       }),
                     });
                   }}
@@ -193,10 +230,10 @@ const MapGenerated = () => {
                   pointToLayer={(feature, latlng) => {
                     return L.marker(latlng, {
                       icon: L.icon({
-                        iconUrl: localIcon,
-                        iconSize: [5, 5],
-                        iconAnchor: [5, 5],
-                        popupAnchor: [5, 5],
+                        iconUrl: DirianImage,
+                        iconSize: [25, 25],
+                        iconAnchor: [25, 25],
+                        popupAnchor: [25, 25],
                       }),
                     });
                   }}
@@ -214,10 +251,10 @@ const MapGenerated = () => {
                 pointToLayer={(feature, latlng) => {
                   return L.marker(latlng, {
                     icon: L.icon({
-                      iconUrl: localIcon,
-                      iconSize: [5, 5],
-                      iconAnchor: [5, 5],
-                      popupAnchor: [5, 5],
+                      iconUrl: DirianImage,
+                      iconSize: [25, 25],
+                      iconAnchor: [25, 25],
+                      popupAnchor: [25, 25],
                     }),
                   });
                 }}
@@ -229,14 +266,64 @@ const MapGenerated = () => {
                 pointToLayer={(feature, latlng) => {
                   return L.marker(latlng, {
                     icon: L.icon({
-                      iconUrl: localIcon,
-                      iconSize: [5, 5],
-                      iconAnchor: [5, 5],
-                      popupAnchor: [5, 5],
+                      iconUrl: DirianImage,
+                      iconSize: [25, 25],
+                      iconAnchor: [25, 25],
+                      popupAnchor: [25, 25],
                     }),
                   });
                 }}
               ></GeoJSON> */}
+
+              {/* CUMA CONTOH GEOJSON DENGAN CUSTOM STYLE */}
+              {/* <GeoJSON
+                data={Jaringan_Jalan_1_39}
+                style={{ color: "red", weight: 5 }}
+              /> */}
+            </LayerGroup>
+          </LayersControl.Overlay>
+          <LayersControl.Overlay name="Guna Tanah">
+            <LayerGroup>
+              <GeoJSON data={Gunatanah_1_35} />
+              <GeoJSON data={Gunatanah_2_28} />
+              <GeoJSON data={Gunatanah_3_21} />
+              <GeoJSON data={Gunatanah_42} />
+              <GeoJSON data={Gunatanah_4_15} />
+              <GeoJSON data={Gunatanah_5_7} />
+              <GeoJSON data={Gunatanah_6_0} />
+            </LayerGroup>
+          </LayersControl.Overlay>
+          <LayersControl.Overlay name="Jaringan Jalan">
+            <LayerGroup>
+              <GeoJSON data={Jaringan_Jalan_1_39} />
+              <GeoJSON data={Jaringan_Jalan_2_32} />
+              <GeoJSON data={Jaringan_Jalan_3_25} />
+              <GeoJSON data={Jaringan_Jalan_46} />
+              <GeoJSON data={Jaringan_Jalan_4_19} />
+              <GeoJSON data={Jaringan_Jalan_5_12} />
+              <GeoJSON data={Jaringan_Jalan_6_5} />
+            </LayerGroup>
+          </LayersControl.Overlay>
+          <LayersControl.Overlay name="Perimeter Ladang">
+            <LayerGroup>
+              <GeoJSON data={Perimeter_Ladang_1_37} />
+              <GeoJSON data={Perimeter_Ladang_2_30} />
+              <GeoJSON data={Perimeter_Ladang_3_22} />
+              <GeoJSON data={Perimeter_Ladang_44} />
+              <GeoJSON data={Perimeter_Ladang_4_17} />
+              <GeoJSON data={Perimeter_Ladang_5_10} />
+              <GeoJSON data={Perimeter_Ladang_6_2} />
+            </LayerGroup>
+          </LayersControl.Overlay>
+          <LayersControl.Overlay name="Terlebih Tanam">
+            <LayerGroup>
+              <GeoJSON data={Terlebih_Tanam_1_34} />
+              <GeoJSON data={Terlebih_Tanam_2_27} />
+              <GeoJSON data={Terlebih_Tanam_3_20} />
+              <GeoJSON data={Terlebih_Tanam_41} />
+              <GeoJSON data={Terlebih_Tanam_4_14} />
+              <GeoJSON data={Terlebih_Tanam_5_9} />
+              <GeoJSON data={Terlebih_Tanam_6_3} />
             </LayerGroup>
           </LayersControl.Overlay>
         </LayersControl>
